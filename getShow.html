@@ -63,7 +63,7 @@
     }
 
     async function getConvertData(input) {
-        let resData = await fetch('http://api.tvmaze.com/singlesearch/shows?q=' + input)
+        let resData = await fetch('https://api.tvmaze.com/singlesearch/shows?q=' + input)
         let data = await resData.json()
         // var output =  Object.values(data)[0] 
         console.log(data)
