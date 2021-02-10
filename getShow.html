@@ -43,7 +43,10 @@
                     <input id="country" class="form-control mb-2" type="text">
                     <label for="channel">Show Channel</label>
                     <input id="channel" class="form-control mb-2" type="text">
-                   
+                    <label for="lang">Serial Language</label>
+                    <input type="text" id="lang" class="form-control mb-2">
+                    <label for="demo">Summary</label>
+                    <p id="demo"></p> 
                 </div>
                 <label for="banner" class="text-center" id="banners"></label>
                 <div class="form-group text-center">
@@ -60,7 +63,7 @@
     }
 
     async function getConvertData(input) {
-        let resData = await fetch('https://api.tvmaze.com/singlesearch/shows?q=' + input)
+        let resData = await fetch('http://api.tvmaze.com/singlesearch/shows?q=' + input)
         let data = await resData.json()
         // var output =  Object.values(data)[0] 
         console.log(data)
@@ -76,7 +79,10 @@
         document.querySelector("#country").disabled = true
         document.querySelector("#channel").value = data.network.name
         document.querySelector("#channel").disabled = true
-        document.querySelector("#demo").innerHTML = data
+        document.querySelector('#lang').value = data.language
+        document.querySelector('#lang').disabled = true
+        document.querySelector('#demo').innerHTML = data.summary
+        document.querySelector('#demo').style.color = 'white'
     }
 
 </script>
