@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        label{
+            color: white;
+        }
+        h1{
+            background-color: chocolate;
+        }
+    </style>
+</head>
+
+<body>
+    <div class=" container">
+        <div class="row">
+            <div class="col-12  col-md-6 mt-5 formData bg-dark">
+                <h1 class="text-center  ">Check Your Favourire Show Details</h1>
+                <div class="form-group ">
+                    <label for="getVal">Enter show name</label>
+                    <input id="getVal" class="form-control mb-2" type="text">
+                    <button type="submit" class="btn btn-info mb-2 btn-block form-control"
+                        onClick="getData()">Get Details</button>
+                </div>
+
+                <div class="form-group ">
+                    <label for="name">Show Name</label>
+                    <input id="name" class="form-control mb-2" type="text">
+                    <label for="genres">Show Genres</label>
+                    <input id="genres" class="form-control mb-2" type="text">
+                    <label for="premier">Show Premier</label>
+                    <input id="premier" class="form-control mb-2" type="text">
+                    <label for="country">Show Country</label>
+                    <input id="country" class="form-control mb-2" type="text">
+                    <label for="channel">Show Channel</label>
+                    <input id="channel" class="form-control mb-2" type="text">
+                   
+                </div>
+                <label for="banner" class="text-center" id="banners"></label>
+                <div class="form-group text-center">
+                   
+                    <img id="banner" />
+                </div>
+
+               
+</body>
+<script src="getShows.js"></script>
+
+</html>
